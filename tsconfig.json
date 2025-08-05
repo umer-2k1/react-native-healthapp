@@ -1,0 +1,36 @@
+
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+    "compilerOptions": {
+    "strict": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "strictFunctionTypes": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["*"], 
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@screens/*": ["screens/*"],
+      "@screens": ["screens"],
+      "@utils/*": ["utils/*"],
+      "@utils": ["utils"],
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"],
+      "@constants": ["constants"],
+      "@store/*": ["store/*"],
+      "@services": ["services/index.ts"],  
+      "@validations": ["validations"],
+      "@types": ["types/index.ts"],
+      "@navigation/*": ["navigation/*"],
+      "@styles/*": ["styles/*"],
+      "@icons": ["components/Icon"],
+      // "@env": ["/env"]
+    }
+  },
+  "exclude": ["./android/**/*", "./ios/**/*", "./node_modules/**/*"],
+}
+
