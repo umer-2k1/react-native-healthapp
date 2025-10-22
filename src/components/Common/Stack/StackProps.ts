@@ -7,6 +7,10 @@ interface StackProps {
   p?: number;
   px?: number;
   py?: number;
+  pt?: number;
+  pb?: number;
+  pl?: number;
+  pr?: number;
   align?: 'flex-start' | 'center' | 'flex-end' | 'stretch';
   justify?:
     | 'flex-start'
@@ -19,9 +23,11 @@ interface StackProps {
 }
 
 // Helper function for padding styles
-const getPaddingStyles = (p?: number, px?: number, py?: number) => ({
-  paddingHorizontal: px ?? p ?? 0,
-  paddingVertical: py ?? p ?? 0,
+const getPaddingStyles = (p?: number, px?: number, py?: number, pt?: number, pb?: number, pr?: number, pl?: number ) => ({
+  paddingTop: pt ?? py ?? p ?? 0,
+  paddingBottom: pb ?? py ?? p ?? 0,
+  paddingLeft: pl ?? px ?? p ?? 0,
+  paddingRight: pr ?? px ?? p ?? 0,
 });
 
 export {getPaddingStyles};
