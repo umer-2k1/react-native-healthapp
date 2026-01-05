@@ -22,3 +22,4 @@ export * from './RNBottomSheet';
 export * from './NestedCircularProgress';
 export * from './AuthView';
 export * from './CalendarBottomSheet';
+export * from './ProgressBar'
